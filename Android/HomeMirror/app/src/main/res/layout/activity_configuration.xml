@@ -1,0 +1,416 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin"
+        tools:context=".ConfigurationActivity">
+
+        <TextView
+            style="@style/MirrorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_up" />
+
+        <TextView
+            style="@style/ConfigurationItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature" />
+
+        <RadioGroup
+            android:id="@+id/temperature_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/celsius"
+                style="@style/ConfigurationItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:text="Celsius" />
+
+            <RadioButton
+                android:id="@+id/farenheit"
+                style="@style/ConfigurationItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/item_margin"
+                android:layout_marginTop="0dp"
+                android:text="Farenheit" />
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/ConfigurationItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Text Color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/ConfigurationItemText"
+                        android:layout_margin="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R" />
+
+                    <SeekBar
+                        android:id="@+id/ColorPickerRed"
+                        style="@style/ConfigurationItemText"
+                        android:layout_margin="0dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="255"/>
+
+                    <TextView
+                        android:id="@+id/ColorShowerRed"
+                        style="@style/ConfigurationItemText"
+                        android:layout_margin="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="3"
+                        android:text="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/ConfigurationItemText"
+                        android:layout_margin="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="G" />
+
+                    <SeekBar
+                        android:id="@+id/ColorPickerGreen"
+                        style="@style/ConfigurationItemText"
+                        android:layout_margin="0dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="255"/>
+
+                    <TextView
+                        android:id="@+id/ColorShowerGreen"
+                        style="@style/ConfigurationItemText"
+                        android:layout_margin="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="3"
+                        android:text="0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/ConfigurationItemText"
+                        android:layout_margin="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B" />
+
+                    <SeekBar
+                        android:id="@+id/ColorPickerBlue"
+                        style="@style/ConfigurationItemText"
+                        android:layout_margin="0dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="255"/>
+
+                    <TextView
+                        android:id="@+id/ColorShowerBlue"
+                        style="@style/ConfigurationItemText"
+                        android:layout_margin="0dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minEms="3"
+                        android:text="0" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/colored_bar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                 />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/biking_checkbox"
+            style="@style/ConfigurationItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/biking_hint" />
+
+        <CheckBox
+            android:id="@+id/mood_detection_checkbox"
+            style="@style/ConfigurationItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/mood_detection_option" />
+
+        <TextView
+            style="@style/ConfigurationDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mood_explanation" />
+
+        <CheckBox
+            android:id="@+id/calendar_checkbox"
+            style="@style/ConfigurationItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/show_calendar_event" />
+
+        <CheckBox
+            android:id="@+id/headline_checkbox"
+            style="@style/ConfigurationItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/show_headline" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/xkcd_checkbox"
+                style="@style/ConfigurationItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/item_margin"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/show_xkcd" />
+
+            <CheckBox
+                android:id="@+id/xkcd_invert_checkbox"
+                style="@style/ConfigurationItemText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/invert_colors" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/countdown_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/countdown_checkbox"
+                style="@style/ConfigurationItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/show_countdown" />
+
+            <CheckBox
+                android:id="@+id/countdown_new_checkbox"
+                style="@style/ConfigurationItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="@string/new_countdown" />
+
+            <LinearLayout
+                android:id="@+id/new_countdown_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/countdown_days"
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/time_day"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_day_short" />
+
+                <EditText
+                    android:id="@+id/countdown_hours"
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/time_hour"
+                    android:maxLength="2"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_hour_short" />
+
+                <EditText
+                    android:id="@+id/countdown_mins"
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/time_min"
+                    android:maxLength="2"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_min_short" />
+
+                <EditText
+                    android:id="@+id/countdown_secs"
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/time_sec"
+                    android:maxLength="2"
+                    android:inputType="number" />
+
+                <TextView
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/time_sec_short" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/location_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/location_title"
+                    style="@style/ConfigurationItemText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location" />
+
+                <TextView
+                    style="@style/ConfigurationDescriptionText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/location_title"
+                    android:layout_marginLeft="@dimen/item_margin"
+                    android:layout_toRightOf="@id/location_title"
+                    android:text="Couldn't detect a recent location" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/latitude"
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/item_margin"
+                    android:layout_weight="1"
+                    android:hint="@string/latitude"
+                    android:inputType="numberDecimal|numberSigned" />
+
+                <EditText
+                    android:id="@+id/longitude"
+                    style="@style/ConfigurationEditText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="@string/longitude"
+                    android:inputType="numberDecimal|numberSigned" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/ConfigurationItemText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/stock" />
+
+        <EditText
+            android:id="@+id/stock_name"
+            style="@style/ConfigurationEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/item_margin"
+            android:hint="@string/ticker_symbol"
+            android:inputType="textCapCharacters" />
+
+        <TextView
+            style="@style/ConfigurationDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stock_description" />
+
+        <Button
+            android:id="@+id/launch_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/item_margin"
+            android:text="@string/launch"
+            android:textSize="@dimen/configuration_text_size" />
+
+        <TextView
+            style="@style/ConfigurationDescriptionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin"
+            android:text="@string/how_to_stop" />
+    </LinearLayout>
+</ScrollView>

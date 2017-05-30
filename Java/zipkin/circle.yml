@@ -1,0 +1,75 @@
+#
+# Copyright 2015-2017 The OpenZipkin Authors
+#
+# Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+# in compliance with the License. You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software distributed under the License
+# is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+# or implied. See the License for the specific language governing permissions and limitations under
+# the License.
+#
+
+# NOTE: we don't use Docker-based testing in CircleCI (as we do in TravisCI) to keep both ways for now.
+machine:
+  services:
+    - mysql
+  java:
+    version: openjdk8
+  post:
+    # Manually install very recent version of cassandra; unless we create a user we have to run it as root
+    - curl -SL http://www-us.apache.org/dist/cassandra/3.9/apache-cassandra-3.9-bin.tar.gz | tar xz
+    - sed -i -e 's/INFO/WARN/g' apache-cassandra-*/conf/logback.xml
+    ## Apply system resource limits to Cassandra
+    ## As seen at https://github.com/circleci/image-builder/blob/8d1bb13b614da27447da0cd70d292e867395316b/circleci-provision-scripts/misc.sh#L63-L65
+    - sed -i 's/system_memory_in_mb=.*/system_memory_in_mb=2048/' apache-cassandra-*/conf/cassandra-env.sh
+    - sed -i 's/system_cpu_cores=.*/system_cpu_cores=1/' apache-cassandra-*/conf/cassandra-env.sh
+    - sed -i 's/JVM_OPTS="$JVM_OPTS -Xms${MAX_HEAP_SIZE}"/JVM_OPTS="$JVM_OPTS -Xms256M"/' apache-cassandra-*/conf/cassandra-env.sh
+    ## And finally start up Cassandra
+    - sudo ./apache-cassandra-*/bin/cassandra -R
+    # Manually install Kafka and ZK
+    - curl -SL http://www.us.apache.org/dist/kafka/0.8.2.2/kafka_2.11-0.8.2.2.tgz | tar xz
+    - ./kafka_*/bin/zookeeper-server-start.sh ./kafka_*/config/zookeeper.properties:
+        background: true
+    - ./kafka_*/bin/kafka-server-start.sh ./kafka_*/config/server.properties:
+        background: true
+    # Manually install Elasticsearch
+    - wget https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.2.1/elasticsearch-2.2.1.tar.gz
+    - tar -xvf elasticsearch-2.2.1.tar.gz
+    - elasticsearch-2.2.1/bin/elasticsearch: {background: true}
+    # Wait for ElasticSearch to come up
+    - sleep 10 && curl --retry 10 --retry-delay 5 -v http://127.0.0.1:9200/
+  environment:
+    MYSQL_USER: ubuntu
+    MYSQL_DB: circle_test
+
+dependencies:
+  override:
+    - sudo apt-get install xsltproc
+    - ./circleci/go-offline.sh
+    - ./mvnw frontend:install-node-and-npm frontend:npm -pl zipkin-ui
+  cache_directories:
+    - "~/.npm"
+    - "zipkin-ui/node_modules"
+
+database:
+  override:
+    - mysql -u ubuntu -e 'SET GLOBAL innodb_file_format=Barracuda'
+    - mysql -u ubuntu circle_test < zipkin-storage/mysql/src/main/resources/mysql.sql
+
+test:
+  override:
+    - ./circleci/test.sh:
+        parallel: true
+        files:
+          - "**/test/**/*Test.java"
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+
+# Send notifications to Gitter
+notify:
+  webhooks:
+    - url: https://webhooks.gitter.im/e/e63be97ca10d2fbd09c3

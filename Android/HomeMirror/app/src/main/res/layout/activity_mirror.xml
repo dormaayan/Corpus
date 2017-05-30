@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="right"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/birthday_text"
+        style="@style/MirrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/mirror_birthday_text_size"
+        android:visibility="gone"
+        tools:text="Happy Birthday Andy!" />
+
+    <TextView
+        android:id="@+id/day_text"
+        style="@style/MirrorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Sunday the 22nd" />
+
+    <include layout="@layout/clock" />
+
+    <TextView
+        android:id="@+id/weather_summary"
+        style="@style/MirrorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        tools:text="Partly Cloudy" />
+
+    <TextView
+        android:id="@+id/calendar_title"
+        style="@style/MirrorText"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mirror_item_spacing"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        tools:text="Very important meeting" />
+
+    <TextView
+        android:id="@+id/calendar_details"
+        style="@style/MirrorText"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        tools:text="11:00-12:00 ~ 10 Downing Street" />
+
+    <ImageView
+        android:id="@+id/xkcd_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mirror_item_spacing"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mirror_item_spacing"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/hello_text"
+            style="@style/MirrorListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:text="Good morning, Andy and Hannah" />
+
+        <TextView
+            android:id="@+id/can_bike"
+            style="@style/MirrorListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/bike"
+            android:visibility="gone"
+            tools:text="Don't Bike Today"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/water_plants"
+            style="@style/MirrorListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/air_plant"
+            android:text="@string/water_plants"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/grocery_list"
+            style="@style/MirrorListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/grocery_bag"
+            android:text="@string/grocery_list"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/news_headline"
+            style="@style/MirrorMarqueeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:visibility="gone"
+            tools:text="A news headline"
+            tools:visiblity="visible" />
+
+        <TextView
+            android:id="@+id/stock_text"
+            style="@style/MirrorListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/stock"
+            android:visibility="gone"
+            tools:text="$ETSY $13.46"
+            tools:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mood_text"
+            style="@style/MirrorListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/smile"
+            android:visibility="gone"
+            tools:text="Just be happy"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/countdown_text"
+            style="@style/MirrorListText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:text="Time is up!"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+</LinearLayout>

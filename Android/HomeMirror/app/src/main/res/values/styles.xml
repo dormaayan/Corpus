@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <!-- Customize your theme here. -->
+        <item name="android:background">@android:color/black</item>
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:colorBackground">@android:color/black</item>
+        <item name="android:textSize">@dimen/mirror_text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:checkboxStyle">@style/CompatCheckboxStyle</item>
+        <item name="android:radioButtonStyle">@style/CompatRadioButtonStyle</item>
+        <item name="android:buttonStyle">@android:style/Widget.Holo.Button</item>
+    </style>
+
+    <style name="CompatCheckboxStyle" parent="@android:style/Widget.Holo.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/apptheme_btn_check_holo_dark</item>
+    </style>
+
+    <style name="CompatRadioButtonStyle" parent="@android:style/Widget.Holo.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/apptheme_btn_radio_holo_dark</item>
+    </style>
+
+    <style name="MirrorText">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">sans-serif-light</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:drawablePadding">8dp</item>
+    </style>
+
+    <style name="MirrorListText" parent="MirrorText">
+        <item name="android:paddingBottom">@dimen/item_margin</item>
+    </style>
+
+    <style name="MirrorMarqueeText" parent="MirrorListText">
+        <item name="android:gravity"/>
+    </style>
+
+    <style name="ConfigurationItemText">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:textSize">@dimen/configuration_text_size</item>
+        <item name="android:layout_marginTop">@dimen/item_margin</item>
+    </style>
+
+    <style name="ConfigurationDescriptionText">
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:textSize">@dimen/configuration_description_size</item>
+    </style>
+
+    <style name="ConfigurationEditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textSize">@dimen/configuration_text_size</item>
+    </style>
+
+</resources>

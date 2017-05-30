@@ -1,0 +1,17 @@
+/**
+ * Process execution abstractions.
+ */
+apply plugin: 'java-library'
+
+sourceCompatibility = javaVersion.java9Compatible ? 1.6 : 1.5
+
+dependencies {
+    api project(':baseServices')
+
+    implementation project(':messaging')
+    implementation libraries.guava
+    implementation libraries.slf4j_api
+}
+
+useTestFixtures()
+//useClassycle()

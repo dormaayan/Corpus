@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ListDirectoryResponse xmlns='http://www.emc.com/cos/'>
+	<DirectoryList>
+	<DirectoryEntry>
+		<ObjectID>4980cdb2a411106a04a4538c92a1b204ad92077de6e3</ObjectID>
+ 		<FileType>directory</FileType>
+ 		<Filename>adriancole-blobstore-2096685753</Filename>
+	</DirectoryEntry>
+	<DirectoryEntry>
+		<ObjectID>4980cdb2a410105404980d99e53a0504ad93939e7dc3</ObjectID>
+ 		<FileType>directory</FileType>
+ 		<Filename>adriancole-blobstore247496608</Filename>
+	</DirectoryEntry>
+	</DirectoryList>
+</ListDirectoryResponse>
