@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "CINode",
+  "namespace": "org.apache.gora.goraci.generated",
+  "fields" : [
+    {"name": "prev", "type": "long","default":0},
+    {"name": "client", "type": ["null","string"],"default":null},
+    {"name": "count", "type": "long","default":0}
+  ]
+}
