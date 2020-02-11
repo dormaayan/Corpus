@@ -399,7 +399,7 @@
     <repository>
       <id>java.net</id>
       <name>Java.Net</name>
-      <url>http://download.java.net/maven/2/</url>
+      <url>https://download.java.net/maven/2/</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
@@ -410,7 +410,7 @@
     <repository>
       <id>codehaus</id>
       <name>Codehaus Public</name>
-      <url>http://repository.codehaus.org/</url>
+      <url>https://repository.codehaus.org/</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
@@ -420,7 +420,7 @@
     </repository>
     <repository>
       <id>repository.jboss.org</id>
-      <url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+      <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
@@ -428,7 +428,7 @@
     <repository>
       <id>ghelmling.testing</id>
       <name>Gary Helmling test repo</name>
-      <url>http://people.apache.org/~garyh/mvn/</url>
+      <url>https://people.apache.org/~garyh/mvn/</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
@@ -441,7 +441,7 @@
     <pluginRepository>
       <id>ghelmling.testing</id>
       <name>Gary Helmling test repo</name>
-      <url>http://people.apache.org/~garyh/mvn/</url>
+      <url>https://people.apache.org/~garyh/mvn/</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>

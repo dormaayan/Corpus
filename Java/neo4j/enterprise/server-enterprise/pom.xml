@@ -295,7 +295,7 @@
         <repository>
           <id>neo4j-dev</id>
           <name>Neo4j Developer Repository</name>
-          <url>http://m2.neo4j.org/content/groups/everything/</url>
+          <url>https://m2.neo4j.org/content/groups/everything/</url>
         </repository>
       </repositories>
     </profile>
@@ -305,7 +305,7 @@
     <repository>
       <id>neo4j-release-repository</id>
       <name>Neo4j Maven 2 release repository</name>
-      <url>http://m2.neo4j.org/content/repositories/releases</url>
+      <url>https://m2.neo4j.org/content/repositories/releases</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -316,7 +316,7 @@
     <repository>
       <id>neo4j-snapshot-repository</id>
       <name>Neo4j Maven 2 snapshot repository</name>
-      <url>http://m2.neo4j.org/content/repositories/snapshots</url>
+      <url>https://m2.neo4j.org/content/repositories/snapshots</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
