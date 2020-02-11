@@ -42,18 +42,18 @@
 	<repositories>
 		<repository>
 			<id>ess-repo</id>
-			<url>http://repo.ess3.net/content/groups/public</url>
+			<url>https://repo.ess3.net/content/groups/public</url>
 		</repository>
 	</repositories>
 
 	<distributionManagement>
 		<snapshotRepository>
 			<id>essdev</id>
-			<url>http://repo.ess3.net/content/repositories/essdev</url>
+			<url>https://repo.ess3.net/content/repositories/essdev</url>
 		</snapshotRepository>
 		<repository>
 			<id>essrel</id>
-			<url>http://repo.ess3.net/content/repositories/essrel</url>
+			<url>https://repo.ess3.net/content/repositories/essrel</url>
 		</repository>
 	</distributionManagement>
 

@@ -121,7 +121,7 @@
     <repositories>
         <repository>
             <id>jetbrains-utils</id>
-            <url>http://repository.jetbrains.com/utils</url>
+            <url>https://repository.jetbrains.com/utils</url>
         </repository>
     </repositories>
 </project>

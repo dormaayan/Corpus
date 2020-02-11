@@ -485,13 +485,13 @@
     <repositories>
         <repository>
             <id>codehaus</id>
-            <url>http://repository.codehaus.org</url>
+            <url>https://repository.codehaus.org</url>
         </repository>
 
         <repository>
             <id>gosu-lang.org-releases</id>
             <name>Official Gosu website (releases)</name>
-            <url>http://gosu-lang.org/repositories/m2/releases</url>
+            <url>https://gosu-lang.org/repositories/m2/releases</url>
         </repository>
     </repositories>
 

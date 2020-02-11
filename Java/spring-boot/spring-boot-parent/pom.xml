@@ -652,7 +652,7 @@
 			<repositories>
 				<repository>
 					<id>spring-ext</id>
-					<url>http://repo.spring.io/ext-release-local/</url>
+					<url>https://repo.spring.io/ext-release-local/</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
@@ -663,7 +663,7 @@
 				<repository>
 					<id>spring-milestones</id>
 					<name>Spring Milestones</name>
-					<url>http://repo.spring.io/milestone</url>
+					<url>https://repo.spring.io/milestone</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -671,7 +671,7 @@
 				<repository>
 					<id>spring-snapshots</id>
 					<name>Spring Snapshots</name>
-					<url>http://repo.spring.io/snapshot</url>
+					<url>https://repo.spring.io/snapshot</url>
 					<snapshots>
 						<enabled>true</enabled>
 					</snapshots>
@@ -689,7 +689,7 @@
 				<pluginRepository>
 					<id>spring-milestones</id>
 					<name>Spring Milestones</name>
-					<url>http://repo.spring.io/milestone</url>
+					<url>https://repo.spring.io/milestone</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -697,7 +697,7 @@
 				<pluginRepository>
 					<id>spring-snapshots</id>
 					<name>Spring Snapshots</name>
-					<url>http://repo.spring.io/snapshot</url>
+					<url>https://repo.spring.io/snapshot</url>
 					<snapshots>
 						<enabled>true</enabled>
 					</snapshots>
@@ -717,7 +717,7 @@
 			<repositories>
 				<repository>
 					<id>spring-ext</id>
-					<url>http://repo.spring.io/ext-release-local/</url>
+					<url>https://repo.spring.io/ext-release-local/</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
@@ -728,7 +728,7 @@
 				<repository>
 					<id>spring-milestones</id>
 					<name>Spring Milestones</name>
-					<url>http://repo.spring.io/milestone</url>
+					<url>https://repo.spring.io/milestone</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -736,7 +736,7 @@
 				<repository>
 					<id>spring-snapshots</id>
 					<name>Spring Snapshots</name>
-					<url>http://repo.spring.io/snapshot</url>
+					<url>https://repo.spring.io/snapshot</url>
 					<snapshots>
 						<enabled>true</enabled>
 					</snapshots>
@@ -754,7 +754,7 @@
 				<pluginRepository>
 					<id>spring-milestones</id>
 					<name>Spring Milestones</name>
-					<url>http://repo.spring.io/milestone</url>
+					<url>https://repo.spring.io/milestone</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -762,7 +762,7 @@
 				<pluginRepository>
 					<id>spring-snapshots</id>
 					<name>Spring Snapshots</name>
-					<url>http://repo.spring.io/snapshot</url>
+					<url>https://repo.spring.io/snapshot</url>
 					<snapshots>
 						<enabled>true</enabled>
 					</snapshots>
@@ -801,7 +801,7 @@
 			<repositories>
 				<repository>
 					<id>spring-ext</id>
-					<url>http://repo.spring.io/ext-release-local/</url>
+					<url>https://repo.spring.io/ext-release-local/</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
@@ -812,7 +812,7 @@
 				<repository>
 					<id>spring-milestones</id>
 					<name>Spring Milestones</name>
-					<url>http://repo.spring.io/milestone</url>
+					<url>https://repo.spring.io/milestone</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -820,7 +820,7 @@
 				<repository>
 					<id>spring-snapshots</id>
 					<name>Spring Snapshots</name>
-					<url>http://repo.spring.io/snapshot</url>
+					<url>https://repo.spring.io/snapshot</url>
 					<snapshots>
 						<enabled>true</enabled>
 					</snapshots>
@@ -838,7 +838,7 @@
 				<pluginRepository>
 					<id>spring-milestones</id>
 					<name>Spring Milestones</name>
-					<url>http://repo.spring.io/milestone</url>
+					<url>https://repo.spring.io/milestone</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -846,7 +846,7 @@
 				<pluginRepository>
 					<id>spring-snapshots</id>
 					<name>Spring Snapshots</name>
-					<url>http://repo.spring.io/snapshot</url>
+					<url>https://repo.spring.io/snapshot</url>
 					<snapshots>
 						<enabled>true</enabled>
 					</snapshots>
@@ -858,7 +858,7 @@
 			<repositories>
 				<repository>
 					<id>spring-ext</id>
-					<url>http://repo.spring.io/ext-release-local/</url>
+					<url>https://repo.spring.io/ext-release-local/</url>
 					<releases>
 						<enabled>true</enabled>
 					</releases>
@@ -892,7 +892,7 @@
 				<pluginRepository>
 					<id>objectstyle</id>
 					<name>ObjectStyle.org Repository</name>
-					<url>http://objectstyle.org/maven2/</url>
+					<url>https://objectstyle.org/maven2/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
