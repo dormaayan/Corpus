@@ -67,7 +67,7 @@
         <jersey.version>1.19</jersey.version>
         <!-- Watch out for Hadoop compatibility when updating to >= 2.5; see https://github.com/druid-io/druid/pull/1669 -->
         <jackson.version>2.4.6</jackson.version>
-        <log4j.version>2.5</log4j.version>
+        <log4j.version>2.13.3</log4j.version>
         <netty.version>4.1.6.Final</netty.version>
         <slf4j.version>1.7.12</slf4j.version>
         <!-- If compiling with different hadoop version also modify default hadoop coordinates in TaskConfig.java -->
