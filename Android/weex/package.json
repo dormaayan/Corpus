@@ -133,7 +133,7 @@
     "rollup-plugin-uglify": "^1.0.1",
     "rollup-watch": "^2.5.0",
     "selenium-server": "2.53.1",
-    "serve": "^1.4.0",
+    "serve": "^11.3.2",
     "sinon": "^1.17.4",
     "sinon-chai": "^2.8.0",
     "uglify-js": "^2.6.4",
