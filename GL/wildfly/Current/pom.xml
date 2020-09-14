@@ -119,7 +119,7 @@
         <version.jsoup>1.6.1</version.jsoup>
         <version.log4j>1.2.16</version.log4j>
         <version.net.jcip>1.0</version.net.jcip>
-        <version.org.apache.ant>1.8.2</version.org.apache.ant>
+        <version.org.apache.ant>1.10.8</version.org.apache.ant>
         <version.org.apache.avro>1.7.6</version.org.apache.avro>
         <version.org.apache.cxf>2.7.11</version.org.apache.cxf>
         <version.org.apache.cxf.xjcplugins>2.6.1</version.org.apache.cxf.xjcplugins>
