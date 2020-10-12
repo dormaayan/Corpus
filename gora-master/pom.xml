@@ -780,7 +780,7 @@
     <hazelcast.version>3.6.4</hazelcast.version>
 
     <!-- Testing Dependencies -->
-    <junit.version>4.10</junit.version>
+    <junit.version>4.13.1</junit.version>
 
     <!-- Maven Plugin Dependencies -->
     <maven-compiler-plugin.version>3.1</maven-compiler-plugin.version>
