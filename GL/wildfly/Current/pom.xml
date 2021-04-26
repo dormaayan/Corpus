@@ -95,7 +95,7 @@
         <version.commons-codec>1.9</version.commons-codec>
         <version.commons-collections>3.2.1</version.commons-collections>
         <version.commons-digester>1.8</version.commons-digester>
-        <version.commons-io>2.4</version.commons-io>
+        <version.commons-io>2.7</version.commons-io>
         <version.commons-configuration>1.6</version.commons-configuration>
         <version.commons-lang>2.6</version.commons-lang>
         <version.commons-pool>1.6</version.commons-pool>
