@@ -66,7 +66,7 @@
         <android-maven-plugin.version>3.9.0-rc.1</android-maven-plugin.version>
         <!-- Target android sdk api level 14 = 4.1.1.4 -->
         <android.version>4.1.1.4</android.version>
-        <wicket.version>7.0.0-M2</wicket.version>
+        <wicket.version>7.17.0</wicket.version>
         <!-- We need a version that works with Java 6 and Java 7: http://www.eclipse.org/jetty/documentation/current/what-jetty-version.html -->
         <jetty.version>8.1.12.v20130726</jetty.version>
         <xmlunit.version>1.5</xmlunit.version>
