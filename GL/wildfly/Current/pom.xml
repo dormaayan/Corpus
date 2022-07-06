@@ -102,7 +102,7 @@
         <version.dom4j>1.6.1</version.dom4j>
         <version.gnu.getopt>1.0.13</version.gnu.getopt>
         <version.groovy-all>2.2.1</version.groovy-all>
-        <version.io.netty>4.0.15.Final</version.io.netty>
+        <version.io.netty>4.1.42.Final</version.io.netty>
         <version.io.undertow>1.0.6.Final</version.io.undertow>
         <version.io.undertow.jastow>1.0.0.Final</version.io.undertow.jastow>
         <version.javax.activation>1.1.1</version.javax.activation>
